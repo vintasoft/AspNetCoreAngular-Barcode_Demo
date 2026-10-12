@@ -1,9 +1,9 @@
 ﻿# VintaSoft ASP.NET Core Angular Barcode Demo
 
-This ASP.NET Core project uses <a href="https://www.vintasoft.com/vsbarcode-dotnet-index.html">VintaSoft Barcode .NET SDK</a>.
-The client-side of project uses HTML+JavaScript+CSS. The server-side of project uses ASP.NET Core API controllers.<br />
+This ASP.NET Core with Angular project uses <a href="https://www.vintasoft.com/vsbarcode-dotnet-index.html">VintaSoft Barcode .NET SDK</a>.
+The client-side of project is written on Angular (TypeScript+HTML+CSS). The server-side of project uses ASP.NET Core API controllers.<br />
 <br />
-The project demonstrates how to recognize and generate barcodes in ASP.NET Core:
+The project demonstrates how to recognize and generate barcodes in ASP.NET Core with Angular:
 * Specify settings of barcode reader.
 * Recognize linear, postal and 2D barcodes in image.
 * Verify print quality of 1D linear barcode image using ISO/IEC 15416 barcode print quality test.
@@ -27,9 +27,9 @@ The project demonstrates how to recognize and generate barcodes in ASP.NET Core:
    Vintasoft.Barcode.BarcodeGlobalSettings.Register("REG_USER", "REG_EMAIL", "EXPIRATION_DATE", "REG_CODE");
    ```
 
-3. Build the project ("AspNetCoreBarcodeDemo.Net10.csproj" file) in Visual Studio or using .NET CLI:
+3. Build the project ("AspNetCoreAngularBarcodeDemo.Net10.csproj" file) in Visual Studio or using .NET CLI:
    ```
-   dotnet build AspNetCoreBarcodeDemo.Net10.csproj
+   dotnet build AspNetCoreAngularBarcodeDemo.Net10.csproj
    ```
 
 4. Run compiled application and try to recognize and generate barcodes.
