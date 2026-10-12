@@ -1,0 +1,47 @@
+<div id="pageHeader">
+  <h2 style="text-align: center">
+    <a href="https://www.vintasoft.com/vsbarcode-dotnet-index.html" target="_blank">VintaSoft Barcode Writer Demo (ASP.NET Core + Angular)</a>
+  </h2>
+</div>
+<div style="margin-top: 10px">
+  <table style="width: 1000px; margin: 0 auto;">
+    <tr>
+      <td style="width:250px">
+        <div>
+          <!-- Button that generates barcode. -->
+          <button id="WriteBarcodeButton" title="Write Barcode" alt="Write barcode" (click)="generateBarcode()">Write barcode</button>
+          <!-- Button that opens dialog with barcode writer settings. -->
+          <button id="BarcodeWriterSettingsButton" title="Barcode Writer Settings" (click)="showBarcodeWriterSettings()" alt="Barcode writer settings">Writer Settings</button>
+          <!-- Button that opens the GS1 value editor dialog. -->
+          <button id="Gs1ValueEditorButton" title="GS1 Value Editor" (click)="showGs1ValueEditor()" alt="GS1 Value Editor">GS1 Value Editor</button>
+          <br />
+          <!-- Information about recognized barcodes. -->
+          <textarea id="barcodeWriteInformationTextBox" style="position: relative; margin-top: 12px; width: 225px;  height: 565px; border: 1px solid #aaa; resize: none" readonly="readonly">
+Please do the following steps if you want to generate not GS1 barcode:
+
+1. Click the "Barcode Writer Settings" button and specify necessary settings.
+
+2. Click the "Write Barcode" button and new barcode image will be added to the image viewer.
+
+
+Please do the following steps if you want to generate GS1 barcode:
+
+1. Click the "GS1 Value Editor" button. Skip this step if you have GS1 value.
+1.1. Create the GS1 value using dialog UI.
+1.2. Copy the GS1 value to the clipboard.
+
+2. Click the "Barcode Writer Settings" button and specify necessary settings. Set the GS1 value in "Value" field.
+
+3. Click the "Write Barcode" button and new barcode image will be added to the image viewer.</textarea>
+        </div>
+      </td>
+      <td style="text-align: center; width: 700px">
+        <div style="width:700px; height:600px;border:1px solid black; overflow:auto">
+          <img id="barcodeImage" src="" />
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <div style="text-align: center">Copyright &copy; 2026 VintaSoft LLC. All rights reserved.</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <h4 class="modal-title">Barcode Writer Settings</h4>
+</div>
+<div class="modal-body modal-dialog-body">
+  <div id="barcodeWriterSettingDialog" style="height: 500px; overflow-x: auto; overflow-y: auto;">
+    <table border="1" class="propertyTable barcode-writer-settings-dialog-table">
+      <tr>
+        <td class="barcode-writer-settings-dialog-barcode-dimension-label"><label>Barcode Dimension:</label></td>
+        <td>
+          <select id="barcodeDimensionSelect" (change)="__barcodeDimensionChanged()">
+            <option value="1D" selected>1D</option>
+            <option value="2D">2D</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <div id="Barcode1DSettingsPropertyGrid"></div>
+    <div id="Barcode2DSettingsPropertyGrid"></div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="closeDialog()">OK</button>
+</div>

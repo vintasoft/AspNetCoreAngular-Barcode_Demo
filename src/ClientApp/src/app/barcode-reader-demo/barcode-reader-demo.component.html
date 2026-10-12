@@ -1,0 +1,32 @@
+<div id="pageHeader">
+  <h2 style="text-align: center">
+    <a href="https://www.vintasoft.com/vsbarcode-dotnet-index.html" target="_blank">VintaSoft Barcode Reader Demo (ASP.NET Core + Angular)</a>
+  </h2>
+</div>
+<div style="margin-top: 10px">
+  <table style="width: 1000px; margin: 0 auto;">
+    <tr>
+      <td style="text-align:center" colspan="2">
+        Image file: <input id="fileInput" type="file" #file (change)="uploadImage(file.files)" />
+        <br />
+      </td>
+    </tr>
+    <tr>
+      <td style="width:270px">
+        <div>
+          <input id="ReadBarcodes" title="Read barcodes" type="button" value="Read barcodes" alt="Read barcodes" (click)="sendReadBarcodeRequest()" />
+          <input id="BarcodeReaderSettings" title="Barcode reader settings" style="margin-left: 5px" type="button" (click)="showBarcodeReaderSettings()" value="Reader Settings" alt="Barcode reader settings" />
+          <textarea id="barcodeInformationTextBox" style="position: relative; margin-top: 12px; width: 245px;  height: 565px; border: 1px solid #aaa; resize: none" readonly="readonly">{{barcodeInformationTextBoxText}}</textarea>
+        </div>
+      </td>
+      <td style="text-align: center; width: 680px">
+        <div style="width: 680px; height: 600px; border: 1px solid black; overflow: auto; position: relative">
+          <img id="uploadedImage" src="UploadedImageFiles/AllSupportedBarcodes.png" (load)="imageLoaded($event)" />
+          <canvas id="selectionCanvas" (dblclick)="onImageDoubleClick($event)" width="1057" height="4744" style="position:absolute; top:0px;left:0px;user-select:none;-webkit-user-select:none;-moz-user-select:none"></canvas>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <div style="text-align: center">Copyright &copy; 2026 VintaSoft LLC. All rights reserved.</div>
+</div>
